@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #ffebee;
+    --bg-color-secundario: #ffcc80;
+    --font: "Open Sans", sans-serif;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    /* Para mejorar el rendering en dispositivos móviles */
+    font-family: var(--font);
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+/* Listas */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Imágenes y multimedia */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+/* Formularios */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    /* Asegura que los elementos de formulario utilicen el mismo font que el resto del documento */
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+/* Enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0;
+}
+
+
+/* Miscellaneous */
+hr {
+    border: 0;
+    border-top: 1px solid currentColor;
+    margin: var(--gap) 0;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+section{
+    background-color: var(--bg-color-secundario);
+}
+.navegador {
+    height: auto;
+    padding: 10px;
+    background-color: var(--bg-color);
+    width: 100%;
+    color: black;
+    position: fixed;
+    z-index: 10000;
+}
+.inputBusqueda{
+    width: 100%;
+}
+
+#contenedorAlojamientos {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+        "uno dos tres";
+    gap: 20px;
+    padding: 20px;
+    border: none;
+    background-color: var(--bg-color-secundario);
+
+}
+.tituloAlojamientos{
+    background-color: var(--bg-color-secundario);
+    font-size: 40px;
+    text-align: center;
+    font-family: var(--font);
+}
+.original-box-shadow {
+    border-radius: 3px;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+}
+
+#contenedorInicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    height: 750px;
+    background-color: var(--bg-color-secundario);
+
+}
+#contenedorCheckout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    height: 300px;
+    background-color: var(--bg-color-secundario);
+
+}
+
+h1 {
+
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+h1:hover {
+    color: #000;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+}
+
+#contenedorInicio h1 {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 40px;
+}
+#contenedorCheckout h1 {
+    font-weight: 700;
+    font-size: 50px;    
+    margin-top: 40px;
+}
+
+#contenedorAlojamientos div {
+
+    background-color: var(--bg-color-secundario);
+}
+.tituloBeneficios{
+    background-color: var(--bg-color-secundario);
+    font-size: 32px;
+    text-align: center;
+    font-family: var(--font);
+    padding-top: 50px;
+
+}
+#contenedorBeneficios{
+    height:auto;
+    background-color: var(--bg-color-secundario);
+    display: grid;
+    grid-template-areas:
+        "uno dos tres";
+    gap: 20px;
+    padding-top: 50px;
+}
+
+h4{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btnReservar {
+    margin: 10px;
+}
+
+.original-box-shadow {
+    background-color: #03950f;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.original-box-shadow::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 8px;
+    box-shadow: 0 40px 15px rgba(0, 0, 0, .5);
+    background-color: transparent;
+    border-radius: 80px / 4px;
+}
+
+#contenedorCarrito{
+    height: 750px;
+    background-color: var(--bg-color-secundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloCarrito{
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: 600;
+}
+#listaCarrito{
+    height: 70%;
+    width: 80%;
+}
+
+.finalCarrito{
+    font-style: italic;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.tracking-in-expand {
+    animation: tracking-in-expand .7s both
+}
+
+@media (max-width:730px) {
+
+    #contenedorAlojamientos {
+        display: flex;
+        flex-direction: column;
+    }
+    #contenedorBeneficios {
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    .ocultar{
+        display: none;
+    }
+}
+
