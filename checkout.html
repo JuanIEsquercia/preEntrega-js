@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <script src="js/alojamientos.js"></script>
     <script defer src="js/app.js"></script>
+    <script defer src="js/checkout.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="./index.html#contenedorAlojamientos">🏠 Alojamientos</a>
-                        <a class="nav-link" href="#">😍 Beneficios</a>
+                        <a class="nav-link" href="./index.html#contenedorBeneficios">😍 Beneficios</a>
                         <a class="nav-link" href="#contenedorCarrito">🛒 Carrito</a>
                     </div>
                 </div>
@@ -53,21 +54,16 @@
                             </tr>
                         </thead>
                         <tbody id="cuerpoCarrito">
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+
+                        </tbody>
                         <tfoot>
                             <tr class="finalCarrito">
                                 <td>Alojamientos en carrito: </td>
                                 <td></td>
-                                <td id="importeTotalCarrito">Total: $ </td>
+                                <td id="importeTotalCarrito">Total:$<span id="totalCarrito"></span></td>
                                 <td></td>
                             </tr>
                         </tfoot>
-                        </tbody>
                     </table>
                 </div>
             </div>
